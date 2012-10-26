@@ -18,7 +18,7 @@ import android.widget.RelativeLayout;
 
 public class PathMenuActivity extends Activity {
 
-	private boolean			areButtonsShowing;
+	private boolean			areButtonsShowing	= false;
 	private RelativeLayout	composerButtonsWrapper;
 	private ImageView		composerButtonsShowHideButtonIcon;
 	private RelativeLayout	composerButtonsShowHideButton;
@@ -29,6 +29,18 @@ public class PathMenuActivity extends Activity {
 		setContentView(R.layout.main);
 
 		composerButtonsWrapper = (RelativeLayout) findViewById(R.id.composer_buttons_wrapper);
+		composerButtonsWrapper.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				if (areButtonsShowing) {
+					MyAnimations.startAnimationsOut(composerButtonsWrapper, 300);
+					composerButtonsShowHideButtonIcon.startAnimation(MyAnimations.getRotateAnimation(-270, 0, 300));
+					areButtonsShowing = !areButtonsShowing;
+				}
+
+			}
+		});
 		composerButtonsShowHideButton = (RelativeLayout) findViewById(R.id.composer_buttons_show_hide_button);
 		composerButtonsShowHideButtonIcon = (ImageView) findViewById(R.id.composer_buttons_show_hide_button_icon);
 
@@ -47,9 +59,7 @@ public class PathMenuActivity extends Activity {
 			}
 		});
 
-
 		composerButtonsShowHideButton.startAnimation(MyAnimations.getRotateAnimation(0, 360, 200));
 
 	}
-
 }
