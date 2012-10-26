@@ -3,7 +3,7 @@
     android:layout_height="fill_parent"
     android:background="@drawable/default_homebg" >
 
-    <RelativeLayout
+    <com.ljp.pathmenu.ComposerLayout
         android:id="@+id/composer_buttons_wrapper"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -19,7 +19,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
             android:background="@drawable/composer_camera"
-            android:visibility="gone" />
+            android:visibility="invisible" />
 
         <ImageButton
             android:id="@+id/composer_button_people"
@@ -28,7 +28,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
             android:background="@drawable/composer_with"
-            android:visibility="gone" />
+            android:visibility="invisible" />
 
         <ImageButton
             android:id="@+id/composer_button_place"
@@ -37,7 +37,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
             android:background="@drawable/composer_place"
-            android:visibility="gone" />
+            android:visibility="invisible" />
 
         <ImageButton
             android:id="@+id/composer_button_music"
@@ -46,7 +46,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
             android:background="@drawable/composer_music"
-            android:visibility="gone" />
+            android:visibility="invisible" />
 
         <ImageButton
             android:id="@+id/composer_button_thought"
@@ -55,7 +55,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
             android:background="@drawable/composer_thought"
-            android:visibility="gone" />
+            android:visibility="invisible" />
 
         <ImageButton
             android:id="@+id/composer_button_sleep"
@@ -64,13 +64,13 @@
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
             android:background="@drawable/composer_sleep"
-            android:visibility="gone" />
-    </RelativeLayout>
+            android:visibility="invisible" />
+    </com.ljp.pathmenu.ComposerLayout>
 
     <RelativeLayout
         android:id="@+id/composer_buttons_show_hide_button"
         android:layout_width="60dp"
-        android:layout_height="57.33333333333333dp"
+        android:layout_height="57dp"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:background="@drawable/composer_button" >

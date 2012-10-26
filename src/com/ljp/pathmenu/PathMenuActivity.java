@@ -1,14 +1,22 @@
 package com.ljp.pathmenu;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
+import android.graphics.Point;
+import android.graphics.Rect;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 public class PathMenuActivity extends Activity {
-	/** Called when the activity is first created. */
 
 	private boolean			areButtonsShowing;
 	private RelativeLayout	composerButtonsWrapper;
@@ -20,7 +28,6 @@ public class PathMenuActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		MyAnimations.initOffset(PathMenuActivity.this);
 		composerButtonsWrapper = (RelativeLayout) findViewById(R.id.composer_buttons_wrapper);
 		composerButtonsShowHideButton = (RelativeLayout) findViewById(R.id.composer_buttons_show_hide_button);
 		composerButtonsShowHideButtonIcon = (ImageView) findViewById(R.id.composer_buttons_show_hide_button_icon);
@@ -39,13 +46,7 @@ public class PathMenuActivity extends Activity {
 				areButtonsShowing = !areButtonsShowing;
 			}
 		});
-		for (int i = 0; i < composerButtonsWrapper.getChildCount(); i++) {
-			composerButtonsWrapper.getChildAt(i).setOnClickListener(new View.OnClickListener() {
-				@Override
-				public void onClick(View arg0) {
-				}
-			});
-		}
+
 
 		composerButtonsShowHideButton.startAnimation(MyAnimations.getRotateAnimation(0, 360, 200));
 
