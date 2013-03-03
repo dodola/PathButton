@@ -1,5 +1,5 @@
 /** Automatically generated file. DO NOT MODIFY */
-package com.ljp.pathmenu;
+package geniuz.pathbuttons;
 
 public final class BuildConfig {
     public final static boolean DEBUG = true;
