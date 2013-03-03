@@ -14,4 +14,4 @@ change：
 
 其中使用了[NineOldAndroids](https://github.com/JakeWharton/NineOldAndroids/) 框架，thanks
 
-[Alt img](https://github.com/dodola/PathButton/raw/master/img.jpg)
+![Alt img](https://github.com/dodola/PathButton/raw/master/img.jpg)
